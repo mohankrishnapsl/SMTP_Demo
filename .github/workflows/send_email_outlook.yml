@@ -1,0 +1,36 @@
+name: Send Email Notification
+on:
+#  push:
+#   branches: [ ]
+  workflow_dispatch:
+jobs:  
+  Send_Email_Notification:
+    runs-on: self-hosted
+    steps:
+      - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # mail server settings
+          server_address: smtp.office365.com
+          server_port: 587
+
+          # user credentials
+          # username: ${{ secrets.EMAIL_USERNAME }}
+          # password: ${{ secrets.EMAIL_PASSWORD }}
+          
+          username: outlook_92ACBC30FC1B6AF9@outlook.com
+          password: 13January*
+
+          # email subject
+          subject: 'Testing email using GitHub Actions'
+          
+          # email body as text
+          body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
+          
+          # comma-separated string, send email to
+          to: mohankrishnapsl@gmail.com
+          
+          # from email name
+          from: Mohan Krishna
+       
