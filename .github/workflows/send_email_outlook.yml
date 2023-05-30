@@ -19,7 +19,8 @@ jobs:
           # username: ${{ secrets.EMAIL_USERNAME }}
           # password: ${{ secrets.EMAIL_PASSWORD }}
           
-          username: outlook_92ACBC30FC1B6AF9@outlook.com
+          #username: outlook_92ACBC30FC1B6AF9@outlook.com
+          username: bhargavi13102@gmail.com
           password: 13January*
 
           # email subject
