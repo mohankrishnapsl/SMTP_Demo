@@ -16,14 +16,17 @@ jobs:
           server_port: 587
 
           # user credentials
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
+          # username: ${{ secrets.EMAIL_USERNAME }}
+          # password: ${{ secrets.EMAIL_PASSWORD }}
           
+          username: mohankrishnapsl@gmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+
           # email subject
-          subject: Testing email using GitHub Actions
+          subject: 'Testing email using GitHub Actions'
           
           # email body as text
-          body: Sending email via Github Actions
+          body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
           
           # comma-separated string, send email to
           to: mohankrishnapsl@gmail.com
