@@ -103,7 +103,7 @@ jobs:
           subject: 'Testing email using GitHub Actions'
 
           #attachments
-          attachments: ${{ steps.check_files.outputs.files_exists == 'true' && 'date.txt' || ''}}
+          attachments: ${{ steps.check_files.outputs.files_exists == 'true' && 'code-quality-and-coverage/PMDResult.csv' || ''}}
           
           # email body as text
           body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
