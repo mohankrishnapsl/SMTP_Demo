@@ -1,4 +1,4 @@
-name: Send Email Notification
+name: Send Outlook Notification
 on:
 #  push:
 #   branches: [ ]

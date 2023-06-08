@@ -1,4 +1,4 @@
-name: Send Email Notification
+name: Send Gmail Notification
 on:
 #  push:
 #   branches: [ ]
