@@ -75,8 +75,8 @@ jobs:
       #     from: Mohan Krishna
       
       - name: Send mail
-        env:
-          ATTACHMENT : ${{ steps.check_files.outputs.files_exists == 'true' && 'date.txt' || ''}}
+        # env:
+        #   ATTACHMENT : ${{ steps.check_files.outputs.files_exists == 'true' && 'date.txt' || ''}}
         uses: dawidd6/action-send-mail@v3
         with:
           # mail server settings
@@ -94,7 +94,7 @@ jobs:
           subject: 'Testing email using GitHub Actions'
 
           #attachments
-          attachments: ${{ ATTACHMENT }}
+          attachments: ${{ steps.check_files.outputs.files_exists == 'true' && 'date.txt' || ''}}
           
           # email body as text
           body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
