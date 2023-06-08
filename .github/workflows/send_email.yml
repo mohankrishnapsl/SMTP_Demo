@@ -7,8 +7,21 @@ jobs:
   Send_Email_Notification:
     runs-on: self-hosted
     steps:
-      - name: Send mail
-        if: always()
+      - name: create a date.txt file
+        run: echo "June 8th 2023" > date.txt
+
+      - name: Check file existence
+        id: check_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "date.txt"
+
+      # - name: File exists
+      #   if: steps.check_files.outputs.files_exists == 'true'
+      #   run: echo "It exists !"
+
+      - name: Send mail with Attachment
+        if: steps.check_files.outputs.files_exists == 'true'
         uses: dawidd6/action-send-mail@v3
         with:
           # mail server settings
@@ -24,6 +37,9 @@ jobs:
 
           # email subject
           subject: 'Testing email using GitHub Actions'
+
+          #attachments
+          attachments: date.txt
           
           # email body as text
           body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
