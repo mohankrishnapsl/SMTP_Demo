@@ -49,4 +49,34 @@ jobs:
           
           # from email name
           from: Mohan Krishna
+
+      - name: Send mail without Attachment
+        if: steps.check_files.outputs.files_exists == 'false'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # mail server settings
+          server_address: smtp.gmail.com
+          server_port: 587
+
+          # user credentials
+          # username: ${{ secrets.EMAIL_USERNAME }}
+          # password: ${{ secrets.EMAIL_PASSWORD }}
+          
+          username: mohankrishnapsl@gmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+
+          # email subject
+          subject: 'Testing email using GitHub Actions'
+
+          #attachments
+          # attachments: date.txt
+          
+          # email body as text
+          body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
+          
+          # comma-separated string, send email to
+          to: mohankrishnapsl@gmail.com
+          
+          # from email name
+          from: Mohan Krishna
        
