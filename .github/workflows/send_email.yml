@@ -7,8 +7,8 @@ jobs:
   Send_Email_Notification:
     runs-on: self-hosted
     steps:
-      - name: create a date.txt file
-        run: echo "June 8th 2023" > date.txt
+      # - name: create a date.txt file
+      #   run: echo "June 8th 2023" > date.txt
 
       - name: Check file existence
         id: check_files
