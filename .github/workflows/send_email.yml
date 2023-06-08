@@ -7,18 +7,12 @@ jobs:
   Send_Email_Notification:
     runs-on: self-hosted
     steps:
-      # - name: create a date.txt file
-      #   run: echo "June 8th 2023" > date.txt
 
-      - name: Check file existence
+      - name: Check for File availability
         id: check_files
         uses: andstor/file-existence-action@v1
         with:
           files: "date.txt"
-
-      # - name: File exists
-      #   if: steps.check_files.outputs.files_exists == 'true'
-      #   run: echo "It exists !"
 
       - name: Send mail with Attachment
         if: steps.check_files.outputs.files_exists == 'true'
