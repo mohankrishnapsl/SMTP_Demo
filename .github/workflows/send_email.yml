@@ -8,6 +8,15 @@ jobs:
     runs-on: self-hosted
     steps:
 
+      - name: 'Git Version'
+         run:   git --version
+
+      - name: 'Git Checkout'  
+        uses: actions/checkout@v3
+        with:
+        ref: master
+        fetch-depth: 0
+
       - name: Check for File availability
         id: check_files
         uses: andstor/file-existence-action@v1
