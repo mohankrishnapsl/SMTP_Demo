@@ -9,13 +9,13 @@ jobs:
     steps:
 
       - name: 'Git Version'
-         run:   git --version
+        run: git --version
 
       - name: 'Git Checkout'  
         uses: actions/checkout@v3
         with:
-        ref: master
-        fetch-depth: 0
+          ref: master
+          fetch-depth: 0
 
       - name: Check for File availability
         id: check_files
