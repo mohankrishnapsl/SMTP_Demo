@@ -106,8 +106,10 @@ jobs:
           attachments: ${{ steps.check_files.outputs.files_exists == 'true' && 'date.txt' || ''}}
           
           # email body as text
-          body: Github Repository - ${{github.repository}} 
-                Github Pull Request - ${{github.event.number}} 
+          body: Github Repository - ${{github.repository}} ---
+                Github Pull Request - ${{github.event.number}} ---
+                Github Pull Request Name - ${{github.event.pull_request.title}} ---
+                Github Pull Request Name - ${{github.event.pull_request.html_url}} ---
                 Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!
           
           # comma-separated string, send email to
