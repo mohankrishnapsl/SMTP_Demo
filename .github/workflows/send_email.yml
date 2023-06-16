@@ -103,13 +103,13 @@ jobs:
           subject: 'Testing email using GitHub Actions'
 
           #attachments
-          attachments: ${{ steps.check_files.outputs.files_exists == 'true' && 'code-quality-and-coverage/PMDResult.csv' || ''}}
+          attachments: ${{ steps.check_files.outputs.files_exists == 'true' && 'date.txt' || ''}}
           
           # email body as text
-          body: 'Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!'
+          body: Github Repository - ${{github.repository}} $Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!
           
           # comma-separated string, send email to
-          to: mohankrishnapsl@gmail.com
+          to: mohankrishnapsl@gmail.com, kannayya01@gmail.com
           
           # from email name
           from: Mohan Krishna
