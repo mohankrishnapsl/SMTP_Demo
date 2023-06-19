@@ -2,6 +2,8 @@ name: Send Gmail Notification
 on:
   pull_request:
     branches: [ master ]
+  push:
+    branches: [master]
   workflow_dispatch:
 jobs:  
   Send_Email_Notification:
