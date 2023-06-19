@@ -112,9 +112,9 @@ jobs:
                 Github Pull Request url - ${{github.event.pull_request.html_url}} \
                 Github PUll Request Author Name - ${{github.event.pull_request.user.login}} \
                 Github PUll Request Author Name - ${{github.event.pull_request.user.email}} \
-                # Github PUll Request Author Name - ${{github.event.pusher.name}} \
-                # Github PUll Request Author Email - ${{github.event.pusher.email}} \
-                Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!
+                sending email via githubactions
+                # Github PUll Request Author Name - ${{github.event.pusher.name}}
+                # Github PUll Request Author Email - ${{github.event.pusher.email}}
           # comma-separated string, send email to
           to: mohankrishnapsl@gmail.com, kannayya01@gmail.com
           
