@@ -123,9 +123,6 @@ jobs:
                       <b>Github Pull Request Name</b> - ${{github.event.pull_request.title}}<br>
                       <b>Github Pull Request url</b> - ${{github.event.pull_request.html_url}}<br>
                       <b>Github PUll Request Author Name</b> - ${{github.event.pull_request.user.login}}<br>
-                      # <b>Github PUll Request Author Name</b> - ${{github.event.pusher.name}}<br>
-                      # <b>Github PUll Request Author Email</b> - ${{github.event.pusher.email}}<br>
-                      <b>Sending email via Github Actions. Email via Github actions   is working!!! Hurrah!!</b><br>
                       </body>
                       </html>
           
