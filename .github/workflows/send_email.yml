@@ -115,7 +115,7 @@ jobs:
                 Github PUll Request Author Email - ${{github.event.pusher.email}} \
                 Sending email via Github Actions. Email via Github actions is working!!! Hurrah!!
 
-          html_body: print.html
+          html_body: file://print.html
                       
           
           # comma-separated string, send email to
